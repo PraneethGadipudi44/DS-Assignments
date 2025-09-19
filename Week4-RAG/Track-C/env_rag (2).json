@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-09-19T04:28:24.204674",
+  "python": "3.12.11 (main, Jun  4 2025, 08:56:18) [GCC 11.4.0]",
+  "platform": "Linux-6.1.123+-x86_64-with-glibc2.35",
+  "cuda_available": true,
+  "packages": {
+    "langchain": "0.3.27",
+    "langchain_community": "0.3.29",
+    "chromadb": "1.1.0",
+    "tiktoken": "0.11.0",
+    "transformers": "4.56.1",
+    "datasets": "4.1.1",
+    "evaluate": "0.4.6",
+    "peft": "0.17.1",
+    "sentence_transformers": "5.1.0",
+    "langchain_google_genai": "unknown",
+    "google.genai": "1.38.0"
+  }
+}

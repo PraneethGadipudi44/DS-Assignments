@@ -1,0 +1,57 @@
+{
+  "timestamp": "2025-09-19T04:58:34.335655",
+  "files_used": [
+    {
+      "name": "NeurIPS-2024-can-large-language-model-agents-simulate-human-trust-behavior-Paper-Conference.pdf",
+      "bytes": 5121261,
+      "sha256": "a729dec371ccdf5705d89915d720271d1bdd35a1cf3998c7db65db8891c51140"
+    },
+    {
+      "name": "NeurIPS-2024-richelieu-self-evolving-llm-based-agents-for-ai-diplomacy-Paper-Conference.pdf",
+      "bytes": 2331306,
+      "sha256": "74788fa9a33b3926aac6d275ae299e61cec918abc6525a42baeb56eb5204b53c"
+    },
+    {
+      "name": "NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference.pdf",
+      "bytes": 7320523,
+      "sha256": "ee5165fd72486bef7039a6810b29d3f9e852c06bb27e9b1048533fa250f53887"
+    }
+  ],
+  "chunk_settings_tested": [
+    {
+      "chunk_size": 500,
+      "chunk_overlap": 100
+    },
+    {
+      "chunk_size": 300,
+      "chunk_overlap": 50
+    }
+  ],
+  "embedding_models_tested": [
+    "sentence-transformers/all-MiniLM-L6-v2"
+  ],
+  "vectorstores": [
+    "chroma_minilm",
+    "chroma_minilm_small"
+  ],
+  "llm": {
+    "providers": [
+      "google-genai",
+      "hf-local"
+    ],
+    "models": [
+      "gemini-1.5-flash",
+      "google/flan-t5-small (LoRA)"
+    ]
+  },
+  "retriever_k": 4,
+  "finetune": {
+    "base_model": "google/flan-t5-small",
+    "adapter_dir": "artifacts/ft/flan_t5_small_lora",
+    "dataset": "squad",
+    "train_n": 800,
+    "eval_n": 200,
+    "seed": 42
+  },
+  "comparison_log": "artifacts/ft/rag_comparison.json"
+}

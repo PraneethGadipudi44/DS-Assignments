@@ -1,0 +1,8 @@
+{
+  "base_model": "google/flan-t5-small",
+  "adapter_dir": "artifacts/ft/flan_t5_small_lora",
+  "dataset": "squad",
+  "train_n": 800,
+  "eval_n": 200,
+  "seed": 42
+}
