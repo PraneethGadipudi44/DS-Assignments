@@ -1,0 +1,10 @@
+{
+  "chunk_size": 500,
+  "chunk_overlap": 100,
+  "embedding_models_tested": [
+    "models/text-embedding-004",
+    "sentence-transformers/all-MiniLM-L6-v2"
+  ],
+  "llm": "gemini-2.5-flash",
+  "retriever_k": 4
+}
