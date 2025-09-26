@@ -1,0 +1,23 @@
+{
+  "corpus_dir": "corpus",
+  "chunks": {
+    "count": 1066,
+    "chunk_size": 500,
+    "chunk_overlap": 100
+  },
+  "embedding_models_tested": [
+    "sentence-transformers/all-MiniLM-L6-v2",
+    "intfloat/e5-small-v2"
+  ],
+  "retriever_k": 6,
+  "pipelines": [
+    "baseline_dense",
+    "dense_plus_rerank",
+    "dense_plus_compress",
+    "rrf_plus_rerank_plus_compress"
+  ],
+  "eval_items": 6,
+  "outputs": {
+    "ablation_csv": "ablation_results.csv"
+  }
+}

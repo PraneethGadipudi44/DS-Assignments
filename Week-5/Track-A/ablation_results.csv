@@ -1,0 +1,25 @@
+idx,pipeline,question,hit_gold,latency_sec,avg_ctx_chars,n_returned
+1,baseline_dense,Define Valid Response Rate (VRR) in the Trust Game in one line.,True,0.0392,444.5,6
+1,dense_plus_rerank,Define Valid Response Rate (VRR) in the Trust Game in one line.,True,0.4503,444.5,6
+1,dense_plus_compress,Define Valid Response Rate (VRR) in the Trust Game in one line.,True,0.4323,476.5,4
+1,rrf_plus_rerank_plus_compress,Define Valid Response Rate (VRR) in the Trust Game in one line.,True,2.1962,466.7,6
+2,baseline_dense,How does trust rate change with probability p in the MAP Trust Game?,True,0.0279,455.0,6
+2,dense_plus_rerank,How does trust rate change with probability p in the MAP Trust Game?,True,0.5452,455.0,6
+2,dense_plus_compress,How does trust rate change with probability p in the MAP Trust Game?,True,0.6836,443.0,4
+2,rrf_plus_rerank_plus_compress,How does trust rate change with probability p in the MAP Trust Game?,True,2.8216,445.7,6
+3,baseline_dense,List the four stages of MDAgents in exact order.,True,0.0328,441.0,6
+3,dense_plus_rerank,List the four stages of MDAgents in exact order.,True,0.3607,441.0,6
+3,dense_plus_compress,List the four stages of MDAgents in exact order.,True,0.3626,452.0,4
+3,rrf_plus_rerank_plus_compress,List the four stages of MDAgents in exact order.,True,1.743,432.3,6
+4,baseline_dense,What do the Moderator and Recruiter do in MDAgents?,True,0.0289,433.3,6
+4,dense_plus_rerank,What do the Moderator and Recruiter do in MDAgents?,True,0.4067,433.3,6
+4,dense_plus_compress,What do the Moderator and Recruiter do in MDAgents?,True,0.4,424.8,4
+4,rrf_plus_rerank_plus_compress,What do the Moderator and Recruiter do in MDAgents?,True,2.152,425.3,6
+5,baseline_dense,"In Richelieu, how does self-play help the agent self-evolve?",True,0.0304,457.3,6
+5,dense_plus_rerank,"In Richelieu, how does self-play help the agent self-evolve?",True,0.3767,457.3,6
+5,dense_plus_compress,"In Richelieu, how does self-play help the agent self-evolve?",True,0.3585,472.5,4
+5,rrf_plus_rerank_plus_compress,"In Richelieu, how does self-play help the agent self-evolve?",True,2.4289,457.2,6
+6,baseline_dense,Give one key difference between MDAgents and Richelieu.,True,0.0373,460.2,6
+6,dense_plus_rerank,Give one key difference between MDAgents and Richelieu.,True,0.5639,460.2,6
+6,dense_plus_compress,Give one key difference between MDAgents and Richelieu.,True,0.6063,443.8,4
+6,rrf_plus_rerank_plus_compress,Give one key difference between MDAgents and Richelieu.,True,2.6235,453.3,6

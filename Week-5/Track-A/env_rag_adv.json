@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-09-26T05:36:44",
+  "python": "3.12.11 (main, Jun  4 2025, 08:56:18) [GCC 11.4.0]",
+  "platform": "Linux-6.6.97+-x86_64-with-glibc2.35",
+  "cuda_available": false,
+  "packages": {
+    "langchain": "0.3.27",
+    "langchain_community": "0.3.29",
+    "chromadb": "1.1.0",
+    "transformers": "4.56.2",
+    "sentence_transformers": "5.1.1",
+    "rank_bm25": "unknown"
+  }
+}
