@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-09-26T05:12:59",
+  "models": {
+    "text_embedding": "sentence-transformers/all-MiniLM-L6-v2",
+    "clip": "clip-ViT-B-32",
+    "generator": "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+  },
+  "counts": {
+    "n_text_chunks": 1066,
+    "n_images": 8
+  },
+  "paths": {
+    "images_dir": "mm_images",
+    "corpus_dir": "corpus"
+  }
+}

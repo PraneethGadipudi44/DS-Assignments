@@ -1,0 +1,4 @@
+query,text@3,images@3,n_text,n_images
+Summarize the trend in Chart 1,"['doc197', 'doc199', 'doc205']","['DecisionTreeClassifier', 'Bernoulli', 'AdaBoostClassifier']",3,3
+Which figure discusses baseline performance?,"['doc662', 'doc897', 'doc619']","['ablation2', 'ablation4', 'ablation1']",3,3
+Find a figure related to evaluation metrics,"['doc651', 'doc195', 'doc1041']","['ablation4', 'ablation2', 'main_table']",3,3
