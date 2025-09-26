@@ -1,0 +1,37 @@
+{
+  "timestamp": "2025-09-26T06:51:26",
+  "retriever": {
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "chroma_dir": "chroma_minilm",
+    "retriever_k": 4,
+    "chunking": {
+      "size": 500,
+      "overlap": 100
+    }
+  },
+  "eval": {
+    "eval_jsonl": "Week5_EvalSet_Template.jsonl",
+    "before_csv": "trackC_eval_before.csv",
+    "after_csv": "trackC_eval_after.csv",
+    "summary_csv": "trackC_eval_summary.csv"
+  },
+  "guardrails": {
+    "pii_patterns": [
+      "SSN-like",
+      "US phone",
+      "email"
+    ],
+    "unsafe_hints": [
+      "private patient data",
+      "password",
+      "api key",
+      "credit card"
+    ]
+  },
+  "packages": {
+    "sentence_transformers": "5.1.1",
+    "chromadb": "1.1.0",
+    "matplotlib": "3.10.6",
+    "langchain_community": "0.3.30"
+  }
+}
