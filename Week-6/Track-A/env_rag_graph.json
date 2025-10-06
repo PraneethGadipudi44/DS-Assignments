@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-10-06T07:30:10",
+  "python": "3.12.11",
+  "platform": "Linux-6.6.97+-x86_64-with-glibc2.35",
+  "packages": {
+    "networkx": "3.5",
+    "numpy": "2.0.2",
+    "pandas": "2.2.2"
+  },
+  "notes": "Regex-based entity extraction; sentence co-occurrence edges; NetworkX graph; graph neighborhood retrieval."
+}

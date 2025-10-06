@@ -1,0 +1,23 @@
+{
+  "data_dir": "./data_week6",
+  "corpus_csv": "./data_week6/corpus.csv",
+  "entity_patterns": {
+    "METHOD": "Method\\s+[A-Z][A-Za-z0-9]*",
+    "AUTHOR": "Author\\s+[A-Z]",
+    "DATASET": "Dataset\\s+[A-Z0-9]+",
+    "PAPER": "Paper\\s+[A-Z0-9]+|Survey\\s+[A-Z0-9]+",
+    "METRIC": "F1|Accuracy|AUC"
+  },
+  "graph": {
+    "nodes": 14,
+    "edges": 6
+  },
+  "retrieval": {
+    "hops_default": 1,
+    "max_spans_default": 12
+  },
+  "baseline_dense": {
+    "enabled": true,
+    "k": 5
+  }
+}

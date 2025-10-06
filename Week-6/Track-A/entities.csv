@@ -1,0 +1,175 @@
+doc_id,entity,type,start,end,span
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Method MDAgents,METHOD,8056,8071," key dimensions of LLM decision-making.
+Method MDAgents
+(Ours) Single Voting [82] Debate [17] M"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Medical",METHOD,23395,23409,"ted in Table 9-12 in
+Appendix.
+Category Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+Pu"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Clinical",METHOD,24504,24519," 65.3 ±3.9 56.4 ±4.5 56.2 ±6.7
+Category Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPl"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Method Avg,METHOD,37515,37525,"atively less complex medical knowledge.
+Method Avg. Accuracy (%)
+MDAgents (Ours) 71.8
++ Me"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Method Accuracy,METHOD,84088,84103,"ons dataset with GPT-4o mini
+.
+Category Method Accuracy (%)
+Single-agent
+Zero-shot 71.5
+3-shot "
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Method MedQA,METHOD,84986,84998," test sets with GPT-4 (Vision) (in USD)
+Method MedQA PubMedQA Path-VQA PMC-VQA DDXPlus SymCa"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Method Accuracy,METHOD,85503,85518,"mpact of Knowledge Enhancement with RAG
+Method Accuracy (%)
+MDAgents (baseline) 71.8
++ MedRAG 7"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Medical",METHOD,87670,87684," for each benchmark and model.
+Category Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+Pu"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Clinical",METHOD,88697,88712," 55.0 ±2.0 41.8 ±3.0 44.5 ±2.0
+Category Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPl"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Medical",METHOD,90188,90202," for each benchmark and model.
+Category Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+Pu"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Clinical",METHOD,91236,91251,"3.3 ±2.3 55.3 ±2.3 42.6 ±4.2 -
+Category Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPl"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Medical",METHOD,92708,92722,"rformance for each benchmark and model.
+Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+Pu"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Clinical",METHOD,92963,92978,"71.0 ±1.6 72.0 ±2.3 62.2 ±7.6 56.2 ±6.7
+Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPl"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Method MedQA,METHOD,93634,93646,"re
+evaluated with GPT-4o mini.
+Category Method MedQA
+T
+PubMedQA
+T
+Path-VQA
+I T
+PMC-VQA
+I T
+M"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Method DDXPlus,METHOD,94303,94317,"Ours) 87.0 71.0 60.0 55.0 56.0
+Category Method DDXPlus
+T
+SymCat
+T
+JAMA
+T
+MedBullets
+T
+MIMIC-CX"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Dataset I,DATASET,69974,69983," system’s trustworthiness and safety.
+A Dataset Information
+We evaluate multi-agent colla"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Dataset M,DATASET,71358,71367," sample information for each benchmark.
+Dataset Modality Format Choice Testing Size Domai"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Dataset
+T",DATASET,83708,83717,"
+D.1 Accuracy on entire MedQA 5-options Dataset
+To provide a comprehensive evaluation of "
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Dataset
+N",DATASET,100426,100435,"fection.
+E.1.2 Medical Cases from MedQA Dataset
+Now, let us look at the cases from the Me"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Paper C,PAPER,124047,124054,"monstrated by human experts.
+36
+NeurIPS Paper Checklist
+1. Claims
+Question: Do the main"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,23010,23018,"e Appendix C.2 for details).
+5
+Table 2: Accuracy (%) on Medical benchmarks with Solo/Gro"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,34933,34941,"of our Adaptive approach.
+SoloGroupOurs
+Accuracy
+**
+OursSoloGroup
+ns
+Figure 4: Our metho"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,37527,37535," complex medical knowledge.
+Method Avg. Accuracy (%)
+MDAgents (Ours) 71.8
++ MedRAG 75.2 "
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,37742,37750,"t of moderator’s review and
+MedRAG. The Accuracy were averaged accuracy across all datas"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,40733,40741,"t of complexity selection of the query. Accuracy of each ablation on text-only (left),
+t"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,40910,40918,": Impact of the number of agents on (a) Accuracy, (b) Number of API Calls on medical
+ben"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,83673,83681,"on your analysis.
+Report Generation
+D.1 Accuracy on entire MedQA 5-options Dataset
+To pr"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,84013,84021,"y results for various
+methods.
+Table 5: Accuracy (%) on entire MedQA 5-options dataset w"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,84095,84103,"aset with GPT-4o mini
+.
+Category Method Accuracy (%)
+Single-agent
+Zero-shot 71.5
+3-shot "
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,85510,85518,"f Knowledge Enhancement with RAG
+Method Accuracy (%)
+MDAgents (baseline) 71.8
++ MedRAG 7"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,86731,86739,"orative settings.
+Collaboration Setting Accuracy (%)
+Sequential & No Discussion 39.0
+Seq"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,87493,87501," decision-making processes.
+24
+Table 9: Accuracy (%) on Medical benchmarks with Solo (
+ "
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,90052,90060,"tested with 3 random seeds
+25
+Table 10: Accuracy (%) on Medical benchmarks with Group (
+"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,92584,92592,"re tested with 3 random seeds
+Table 11: Accuracy (%) on Medical benchmarks with Our (
+ )"
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Accuracy,METRIC,93426,93434,"tested with 3 random seeds
+26
+Table 12: Accuracy (%) on Medical benchmarks with Solo/Gro"
+NeurIPS-2024-richelieu-self-evolving-llm-based-agents-for-ai-diplomacy-Paper-Conference,Paper C,PAPER,70834,70841,"f specially designed
+models.
+20
+NeurIPS Paper Checklist
+The checklist is designed to en"
+NeurIPS-2024-can-large-language-model-agents-simulate-human-trust-behavior-Paper-Conference,Paper 31122,PAPER,53568,53579,"can we learn from
+homo silicus? Working Paper 31122, National Bureau of Economic Research, "
+NeurIPS-2024-can-large-language-model-agents-simulate-human-trust-behavior-Paper-Conference,Paper C,PAPER,147859,147866,"d without CoT’s GPT-4’s BDI.
+50
+NeurIPS Paper Checklist
+1. Claims
+Question: Do the main"

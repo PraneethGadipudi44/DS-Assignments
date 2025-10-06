@@ -1,0 +1,711 @@
+doc_id,head,type1,tail,type2,sentence
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Medical",METHOD,"Method
+Clinical",METHOD,"Category Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+PubMedQA
+T
+Path-VQA
+I T
+PMC-VQA
+I T
+MedVidQA
+V T
+Single-agent
+Zero-shot 75.0 ±1.3 61.5 ±2.2 57.9 ±1.6 49.0 ±3.7 37.9 ±8.4
+Few-shot 72.9 ±11.4 63.1 ±11.7 57.5 ±4.5 52.2 ±2.0 47.1 ±8.6
++ CoT [83] 82.5 ±4.9 57.6 ±9.2 58.6 ±3.1 51.3 ±1.5 48.6 ±5.5
++ CoT-SC [82] 83.9 ±2.7 58.7 ±5.0 61.2 ±2.1 50.5 ±5.2 49.2 ±8.2
+ER [67] 81.9 ±2.1 56.0 ±7.0 61.4 ±4.1 52.7 ±2.9 48.5 ±4.1
+Medprompt [59] 82.4 ±5.1 51.8 ±4.6 59.2 ±5.7 53.4 ±7.9 44.5 ±2.0
+Multi-agent
+(Single-model)
+Majority V oting 80.6 ±2.9 72.2 ±6.9 56.9 ±19.7 36.8 ±6.7 50.8 ±7.4
+Weighted V oting 78.8 ±1.1 72.2 ±6.9 62.1 ±13.9 25.4 ±9.0 57.8 ±2.1
+Borda Count 70.3 ±8.5 66.9 ±3.0 61.9 ±8.1 27.9 ±5.3 54.5 ±4.7
+MedAgents [72] 79.1 ±7.4 69.7 ±4.7 45.4 ±8.1 39.6 ±3.0 51.6 ±4.8
+Meta-Prompting [70] 80.6 ±1.2 73.3 ±2.3 55.3 ±2.3 42.6 ±4.2 -
+Multi-agent
+(Multi-model)
+Reconcile [10] 81.3 ±3.0 79.7 ±3.2 57.5 ±3.3 31.4 ±1.2 -
+AutoGen [86] 60.6 ±5.0 77.3 ±2.3 43.0 ±8.9 37.3 ±6.1 -
+DyLAN [51] 64.2 ±2.3 73.6 ±4.2 41.3 ±1.2 34.0 ±3.5 -
+Adaptive MDAgents (Ours) 88.7±4.0 75.0 ±1.0 65.3 ±3.9 56.4 ±4.5 56.2 ±6.7
+Category Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPlus
+T
+SymCat
+T
+JAMA
+T
+MedBullets
+T
+MIMIC-CXR
+I T
+Single-agent
+Zero-shot 70.3 ±2.0 88.7 ±2.3 62.0 ±2.0 67.0 ±1.4 40.0 ±5.3
+Few-shot 69.4 ±1.0 86.7 ±3.1 69.0 ±4.2 72.0 ±2.8 35.3 ±5.0
++ CoT [83] 72.7 ±7.7 78.0 ±2.0 66.0 ±5.7 70.0 ±0.0 36.2 ±5.2
++ CoT-SC [82] 52.1 ±6.4 83.3 ±3.1 68.0 ±2.8 76.0 ±2.8 51.7 ±4.0
+ER [67] 61.3 ±2.4 82.7 ±2.3 71.0 ±1.4 76.0 ±5.7 50.0 ±0.0
+Medprompt [59] 59.5 ±17.7 87.3 ±1.2 70.7 ±4.3 71.0 ±1.4 53.4 ±4.3
+Multi-agent
+(Single-model)
+Majority V oting 67.8 ±4.9 91.9 ±2.2 70.0 ±5.7 70.0 ±0.0 49.5 ±10.7
+Weighted V oting 65.9 ±3.3 90.5 ±2.9 66.1 ±4.1 66.0 ±5.7 53.5 ±2.2
+Borda Count 67.1 ±6.7 78.0 ±11.8 61.0 ±5.6 66.0 ±2.8 45.3 ±6.8
+MedAgents [72] 62.8 ±5.6 90.0 ±0.0 66.0 ±5.7 77.0 ±1.4 43.3 ±7.0
+Meta-Prompting [70] 52.6 ±6.1 77.3 ±2.3 64.7 ±3.1 49.3 ±1.2 42.0 ±4.0
+Multi-agent
+(Multi-model)
+Reconcile [10] 68.4 ±7.4 90.6 ±2.5 60.7 ±5.7 59.5 ±8.7 33.3 ±3.4
+AutoGen [86] 67.3 ±11.8 73.3 ±3.1 64.6 ±1.2 55.3 ±3.1 43.3 ±4.2
+DyLAN [51] 56.4 ±2.9 75.3 ±4.6 60.1 ±3.1 57.3 ±6.1 38.7 ±1.2
+Adaptive MDAgents (Ours) 77.9 ±2.1 93.1 ±1.0 70.9 ±0.3 80.8 ±1.7 55.9 ±9.1
+* CoT: Chain-of-Thought, SC: Self-Consistency, ER: Ensemble Refinement
+* T : text-only, I : image+text, V : video+text
+* All experiments were tested with 3 random seeds
+4 Experiments and Results
+In this section, we evaluate our framework and baseline methods across different medical benchmarks
+in Solo, Group, and Aaptive settings."
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Dataset
+T",DATASET,Accuracy,METRIC,"Report Generation
+D.1 Accuracy on entire MedQA 5-options Dataset
+To provide a comprehensive evaluation of our approach, we conducted experiments on the entire
+MedQA 5-options dataset using GPT-4o mini."
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Method Accuracy,METHOD,Accuracy,METRIC,"Category Method Accuracy (%)
+Single-agent
+Zero-shot 71.5
+3-shot 72.3
++ CoT 76.6
++ CoT-SC 77.2
+Multi-agent (Multi-model) Majority V oting 76.3
+Weighted V oting 79.1
+Borda Count 76.1
+Multi-agent (Single-model) Reconcile 80.2
+Adaptive MDAgents (Ours) 83.6
+These results demonstrate that our MDAgents approach outperforms both single-agent and other
+multi-agent methods across the full dataset, achieving an accuracy of 83.6%."
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Method Accuracy,METHOD,Accuracy,METRIC,"23
+D.3 Impact of Knowledge Enhancement with RAG
+Method Accuracy (%)
+MDAgents (baseline) 71.8
++ MedRAG 75.2
++ Medical Knowledge Initialization 76.0
++ Moderator’s Review 77.6
++ Moderator’s Review & MedRAG 80.3
+Table 7: Impact of knowledge enhancement on MDAgents performance
+We investigated whether simply assigning roles to agents is sufficient for expert-like performance,
+and explored the impact of equipping agents with different knowledge using Retrieval-Augmented
+Generation (RAG)."
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Medical",METHOD,"Method
+Clinical",METHOD,"Category Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+PubMedQA
+T
+Path-VQA
+I T
+PMC-VQA
+I T
+MedVidQA
+V T
+GPT-3.5
+Zero-shot 48.5 ±3.3 56.8 ±12.0 - - -
+Few-shot 47.8 ±16.4 59.0 ±1.0 - - -
++ CoT 54.2 ±8.9 49.7 ±11.9 - - -
++ CoT-SC 60.5 ±3.2 49.4 ±13.5 - - -
+ER 60.2 ±4.0 52.9 ±15.9 - - -
+Medprompt 60.1 ±10.8 59.8 ±8.5 - - -
+GPT-4(V)
+Zero-shot 75.0 ±1.3 61.5 ±2.2 57.9 ±1.6 49.0 ±3.7 -
+Few-shot 72.9 ±11.4 63.1 ±11.7 57.5 ±4.5 52.2 ±2.0 -
++ CoT [83] 82.5 ±4.9 57.6 ±9.2 58.6 ±3.1 51.3 ±1.5 -
++ CoT-SC [82] 83.9 ±2.7 58.7 ±5.0 61.2 ±2.1 50.5 ±5.2 -
+ER [67] 81.9 ±2.1 56.0 ±7.0 61.4 ±4.1 52.7 ±2.9 -
+Medprompt [59] 82.4 ±5.1 51.8 ±4.6 59.2 ±5.7 53.4 ±7.9 -
+Gemini-Pro(Vision)
+Zero-shot 42.0 ±10.4 65.2 ±14.5 45.9 ±2.8 44.8 ±2.0 37.9 ±8.4
+Few-shot 34.0 ±7.2 55.0 ±0.0 64.5 ±2.3 48.2 ±1.0 47.1 ±8.6
++ CoT 50.0 ±6.0 60.2 ±9.0 66.4 ±11.7 47.1 ±4.2 48.6 ±5.5
++ CoT-SC 52.7 ±4.6 55.8 ±8.9 63.6 ±6.0 46.3 ±2.8 49.2 ±8.2
+ER 52.0 ±7.2 58.4 ±14.2 57.6 ±8.4 38.4 ±2.0 48.5 ±4.1
+Medprompt 45.3 ±3.1 50.6 ±5.4 55.0 ±2.0 41.8 ±3.0 44.5 ±2.0
+Category Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPlus
+T
+SymCat
+T
+JAMA
+T
+MedBullets
+T
+MIMIC-CXR
+I T
+GPT-3.5
+Zero-shot 56.2 ±4.1 84.0 ±0.0 36.0 ±3.3 56.0 ±2.8 -
+Few-shot 48.9 ±8.5 86.0 ±2.8 38.0 ±4.2 59.0 ±1.4 -
++ CoT 52.8 ±5.4 82.0 ±0.0 34.0 ±2.4 56.0 ±5.7 -
++ CoT-SC 37.8 ±6.1 80.0 ±2.8 43.0 ±4.2 63.0 ±4.2 -
+ER 42.3 ±6.9 84.0 ±1.8 44.0 ±5.7 58.0 ±0.0 -
+Medprompt 41.2 ±6.2 86.0 ±2.6 43.0 ±1.4 54.0 ±5.7 -
+GPT-4(V)
+Zero-shot 70.3 ±2.0 88.7 ±2.3 62.0 ±2.0 67.0 ±1.4 40.0 ±5.3
+Few-shot 69.4 ±1.0 86.7 ±3.1 69.0 ±4.2 72.0 ±2.8 35.3 ±5.0
++ CoT [83] 72.7 ±7.7 78.0 ±2.0 66.0 ±5.7 70.0 ±0.0 36.2 ±5.2
++ CoT-SC [82] 52.1 ±6.4 83.3 ±3.1 68.0 ±2.8 76.0 ±2.8 51.7 ±4.0
+ER [67] 61.3 ±2.4 82.7 ±2.3 71.0 ±1.4 76.0 ±5.7 50.0 ±0.0
+Medprompt [59] 59.5 ±17.7 87.3 ±1.2 70.7 ±4.3 71.0 ±1.4 53.4 ±4.3
+Gemini-Pro(Vision)
+Zero-shot 49.9 ±6.5 88.9 ±6.4 42.7 ±3.9 40.0 ±1.5 40.0 ±2.8
+Few-shot 47.1 ±5.6 89.2 ±3.4 41.0 ±1.4 44.0 ±3.9 39.2 ±1.2
++ CoT [83] 65.5 ±4.9 91.9 ±3.4 38.0 ±1.6 52.7 ±7.1 45.2 ±6.8
++ CoT-SC [82] 60.3 ±2.4 92.0 ±1.5 46.0 ±0.0 51.0 ±4.2 54.9 ±3.4
+ER [67] 46.7 ±6.9 58.5 ±7.5 50.8 ±5.8 53.2 ±7.8 53.2 ±3.5
+Medprompt [59] 58.2 ±5.5 92.5 ±4.5 44.4 ±3.2 54.0 ±5.7 51.2 ±1.9
+* CoT: Chain-of-Thought, SC: Self-Consistency, ER: Ensemble Refinement
+* T : text-only, I : image+text, V : video+text
+* All experiments were tested with 3 random seeds
+25
+Table 10: Accuracy (%) on Medical benchmarks with Group (
+ ) setting."
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Medical",METHOD,Accuracy,METRIC,"Category Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+PubMedQA
+T
+Path-VQA
+I T
+PMC-VQA
+I T
+MedVidQA
+V T
+GPT-3.5
+Zero-shot 48.5 ±3.3 56.8 ±12.0 - - -
+Few-shot 47.8 ±16.4 59.0 ±1.0 - - -
++ CoT 54.2 ±8.9 49.7 ±11.9 - - -
++ CoT-SC 60.5 ±3.2 49.4 ±13.5 - - -
+ER 60.2 ±4.0 52.9 ±15.9 - - -
+Medprompt 60.1 ±10.8 59.8 ±8.5 - - -
+GPT-4(V)
+Zero-shot 75.0 ±1.3 61.5 ±2.2 57.9 ±1.6 49.0 ±3.7 -
+Few-shot 72.9 ±11.4 63.1 ±11.7 57.5 ±4.5 52.2 ±2.0 -
++ CoT [83] 82.5 ±4.9 57.6 ±9.2 58.6 ±3.1 51.3 ±1.5 -
++ CoT-SC [82] 83.9 ±2.7 58.7 ±5.0 61.2 ±2.1 50.5 ±5.2 -
+ER [67] 81.9 ±2.1 56.0 ±7.0 61.4 ±4.1 52.7 ±2.9 -
+Medprompt [59] 82.4 ±5.1 51.8 ±4.6 59.2 ±5.7 53.4 ±7.9 -
+Gemini-Pro(Vision)
+Zero-shot 42.0 ±10.4 65.2 ±14.5 45.9 ±2.8 44.8 ±2.0 37.9 ±8.4
+Few-shot 34.0 ±7.2 55.0 ±0.0 64.5 ±2.3 48.2 ±1.0 47.1 ±8.6
++ CoT 50.0 ±6.0 60.2 ±9.0 66.4 ±11.7 47.1 ±4.2 48.6 ±5.5
++ CoT-SC 52.7 ±4.6 55.8 ±8.9 63.6 ±6.0 46.3 ±2.8 49.2 ±8.2
+ER 52.0 ±7.2 58.4 ±14.2 57.6 ±8.4 38.4 ±2.0 48.5 ±4.1
+Medprompt 45.3 ±3.1 50.6 ±5.4 55.0 ±2.0 41.8 ±3.0 44.5 ±2.0
+Category Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPlus
+T
+SymCat
+T
+JAMA
+T
+MedBullets
+T
+MIMIC-CXR
+I T
+GPT-3.5
+Zero-shot 56.2 ±4.1 84.0 ±0.0 36.0 ±3.3 56.0 ±2.8 -
+Few-shot 48.9 ±8.5 86.0 ±2.8 38.0 ±4.2 59.0 ±1.4 -
++ CoT 52.8 ±5.4 82.0 ±0.0 34.0 ±2.4 56.0 ±5.7 -
++ CoT-SC 37.8 ±6.1 80.0 ±2.8 43.0 ±4.2 63.0 ±4.2 -
+ER 42.3 ±6.9 84.0 ±1.8 44.0 ±5.7 58.0 ±0.0 -
+Medprompt 41.2 ±6.2 86.0 ±2.6 43.0 ±1.4 54.0 ±5.7 -
+GPT-4(V)
+Zero-shot 70.3 ±2.0 88.7 ±2.3 62.0 ±2.0 67.0 ±1.4 40.0 ±5.3
+Few-shot 69.4 ±1.0 86.7 ±3.1 69.0 ±4.2 72.0 ±2.8 35.3 ±5.0
++ CoT [83] 72.7 ±7.7 78.0 ±2.0 66.0 ±5.7 70.0 ±0.0 36.2 ±5.2
++ CoT-SC [82] 52.1 ±6.4 83.3 ±3.1 68.0 ±2.8 76.0 ±2.8 51.7 ±4.0
+ER [67] 61.3 ±2.4 82.7 ±2.3 71.0 ±1.4 76.0 ±5.7 50.0 ±0.0
+Medprompt [59] 59.5 ±17.7 87.3 ±1.2 70.7 ±4.3 71.0 ±1.4 53.4 ±4.3
+Gemini-Pro(Vision)
+Zero-shot 49.9 ±6.5 88.9 ±6.4 42.7 ±3.9 40.0 ±1.5 40.0 ±2.8
+Few-shot 47.1 ±5.6 89.2 ±3.4 41.0 ±1.4 44.0 ±3.9 39.2 ±1.2
++ CoT [83] 65.5 ±4.9 91.9 ±3.4 38.0 ±1.6 52.7 ±7.1 45.2 ±6.8
++ CoT-SC [82] 60.3 ±2.4 92.0 ±1.5 46.0 ±0.0 51.0 ±4.2 54.9 ±3.4
+ER [67] 46.7 ±6.9 58.5 ±7.5 50.8 ±5.8 53.2 ±7.8 53.2 ±3.5
+Medprompt [59] 58.2 ±5.5 92.5 ±4.5 44.4 ±3.2 54.0 ±5.7 51.2 ±1.9
+* CoT: Chain-of-Thought, SC: Self-Consistency, ER: Ensemble Refinement
+* T : text-only, I : image+text, V : video+text
+* All experiments were tested with 3 random seeds
+25
+Table 10: Accuracy (%) on Medical benchmarks with Group (
+ ) setting."
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Clinical",METHOD,Accuracy,METRIC,"Category Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+PubMedQA
+T
+Path-VQA
+I T
+PMC-VQA
+I T
+MedVidQA
+V T
+GPT-3.5
+Zero-shot 48.5 ±3.3 56.8 ±12.0 - - -
+Few-shot 47.8 ±16.4 59.0 ±1.0 - - -
++ CoT 54.2 ±8.9 49.7 ±11.9 - - -
++ CoT-SC 60.5 ±3.2 49.4 ±13.5 - - -
+ER 60.2 ±4.0 52.9 ±15.9 - - -
+Medprompt 60.1 ±10.8 59.8 ±8.5 - - -
+GPT-4(V)
+Zero-shot 75.0 ±1.3 61.5 ±2.2 57.9 ±1.6 49.0 ±3.7 -
+Few-shot 72.9 ±11.4 63.1 ±11.7 57.5 ±4.5 52.2 ±2.0 -
++ CoT [83] 82.5 ±4.9 57.6 ±9.2 58.6 ±3.1 51.3 ±1.5 -
++ CoT-SC [82] 83.9 ±2.7 58.7 ±5.0 61.2 ±2.1 50.5 ±5.2 -
+ER [67] 81.9 ±2.1 56.0 ±7.0 61.4 ±4.1 52.7 ±2.9 -
+Medprompt [59] 82.4 ±5.1 51.8 ±4.6 59.2 ±5.7 53.4 ±7.9 -
+Gemini-Pro(Vision)
+Zero-shot 42.0 ±10.4 65.2 ±14.5 45.9 ±2.8 44.8 ±2.0 37.9 ±8.4
+Few-shot 34.0 ±7.2 55.0 ±0.0 64.5 ±2.3 48.2 ±1.0 47.1 ±8.6
++ CoT 50.0 ±6.0 60.2 ±9.0 66.4 ±11.7 47.1 ±4.2 48.6 ±5.5
++ CoT-SC 52.7 ±4.6 55.8 ±8.9 63.6 ±6.0 46.3 ±2.8 49.2 ±8.2
+ER 52.0 ±7.2 58.4 ±14.2 57.6 ±8.4 38.4 ±2.0 48.5 ±4.1
+Medprompt 45.3 ±3.1 50.6 ±5.4 55.0 ±2.0 41.8 ±3.0 44.5 ±2.0
+Category Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPlus
+T
+SymCat
+T
+JAMA
+T
+MedBullets
+T
+MIMIC-CXR
+I T
+GPT-3.5
+Zero-shot 56.2 ±4.1 84.0 ±0.0 36.0 ±3.3 56.0 ±2.8 -
+Few-shot 48.9 ±8.5 86.0 ±2.8 38.0 ±4.2 59.0 ±1.4 -
++ CoT 52.8 ±5.4 82.0 ±0.0 34.0 ±2.4 56.0 ±5.7 -
++ CoT-SC 37.8 ±6.1 80.0 ±2.8 43.0 ±4.2 63.0 ±4.2 -
+ER 42.3 ±6.9 84.0 ±1.8 44.0 ±5.7 58.0 ±0.0 -
+Medprompt 41.2 ±6.2 86.0 ±2.6 43.0 ±1.4 54.0 ±5.7 -
+GPT-4(V)
+Zero-shot 70.3 ±2.0 88.7 ±2.3 62.0 ±2.0 67.0 ±1.4 40.0 ±5.3
+Few-shot 69.4 ±1.0 86.7 ±3.1 69.0 ±4.2 72.0 ±2.8 35.3 ±5.0
++ CoT [83] 72.7 ±7.7 78.0 ±2.0 66.0 ±5.7 70.0 ±0.0 36.2 ±5.2
++ CoT-SC [82] 52.1 ±6.4 83.3 ±3.1 68.0 ±2.8 76.0 ±2.8 51.7 ±4.0
+ER [67] 61.3 ±2.4 82.7 ±2.3 71.0 ±1.4 76.0 ±5.7 50.0 ±0.0
+Medprompt [59] 59.5 ±17.7 87.3 ±1.2 70.7 ±4.3 71.0 ±1.4 53.4 ±4.3
+Gemini-Pro(Vision)
+Zero-shot 49.9 ±6.5 88.9 ±6.4 42.7 ±3.9 40.0 ±1.5 40.0 ±2.8
+Few-shot 47.1 ±5.6 89.2 ±3.4 41.0 ±1.4 44.0 ±3.9 39.2 ±1.2
++ CoT [83] 65.5 ±4.9 91.9 ±3.4 38.0 ±1.6 52.7 ±7.1 45.2 ±6.8
++ CoT-SC [82] 60.3 ±2.4 92.0 ±1.5 46.0 ±0.0 51.0 ±4.2 54.9 ±3.4
+ER [67] 46.7 ±6.9 58.5 ±7.5 50.8 ±5.8 53.2 ±7.8 53.2 ±3.5
+Medprompt [59] 58.2 ±5.5 92.5 ±4.5 44.4 ±3.2 54.0 ±5.7 51.2 ±1.9
+* CoT: Chain-of-Thought, SC: Self-Consistency, ER: Ensemble Refinement
+* T : text-only, I : image+text, V : video+text
+* All experiments were tested with 3 random seeds
+25
+Table 10: Accuracy (%) on Medical benchmarks with Group (
+ ) setting."
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Medical",METHOD,"Method
+Clinical",METHOD,"Category Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+PubMedQA
+T
+Path-VQA
+I T
+PMC-VQA
+I T
+MedVidQA
+V T
+GPT-3.5
+Majority V oting 60.4 ±2.1 68.5 ±9.6 - - -
+Weighted V oting 57.3 ±3.0 65.8 ±11.4 - - -
+Borda Count 55.3 ±7.1 70.2 ±8.8 - - -
+MedAgents [72] 56.0 ±5.3 55.0 ±1.4 - - -
+GPT-4(V)
+Majority V oting 80.6 ±2.9 72.2 ±6.9 56.9 ±19.7 36.8 ±6.7 -
+Weighted V oting 78.8 ±1.1 72.2 ±6.9 62.1 ±13.9 25.4 ±9.0 -
+Borda Count 70.3 ±8.5 66.9 ±3.0 61.9 ±8.1 27.9 ±5.3 -
+MedAgents [72] 79.1 ±7.4 69.7 ±4.7 45.4 ±8.1 39.6 ±3.0 -
+Gemini-Pro(Vision)
+Majority V oting 51.6 ±2.2 65.3 ±12.9 58.2 ±7.3 27.1 ±5.4 50.8 ±7.4
+Weighted V oting 52.3 ±3.3 63.7 ±10.0 66.4 ±11.1 20.9 ±3.8 57.8 ±2.1
+Borda Count 49.4 ±9.7 57.7 ±15.0 68.2 ±1.8 25.3 ±8.7 54.5 ±4.7
+MedAgents [72] 48.4 ±5.5 63.6 ±6.0 64.9 ±12.5 35.1 ±3.1 61.6 ±4.8
+Multi-agent
+Reconcile [10] 81.3 ±3.0 79.7 ±3.2 57.5 ±3.3 31.4 ±1.2 -
+AutoGen [86] 60.6 ±5.0 77.3 ±2.3 43.0 ±8.9 37.3 ±6.1 -
+DyLAN [51] 64.2 ±2.3 73.6 ±4.2 41.3 ±1.2 34.0 ±3.5 -
+Meta-Prompting [70] 80.6 ±1.2 73.3 ±2.3 55.3 ±2.3 42.6 ±4.2 -
+Category Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPlus
+T
+SymCat
+T
+JAMA
+T
+MedBullets
+T
+MIMIC-CXR
+I T
+GPT-3.5
+Majority V oting 53.6 ±2.2 83.7 ±3.3 47.0 ±1.4 46.0 ±4.1 -
+Weighted V oting 55.2 ±2.0 85.9 ±3.0 49.0 ±1.4 43.0 ±8.4 -
+Borda Count 63.9 ±12.1 84.9 ±1.6 50.0 ±1.0 45.0 ±5.6 -
+MedAgents [72] 47.3 ±11.0 87.0 ±4.2 41.0 ±3.3 56.0 ±6.2 -
+GPT-4(V)
+Majority V oting 67.8 ±4.9 91.9 ±2.2 70.0 ±5.7 70.0 ±0.0 49.5 ±10.7
+Weighted V oting 65.9 ±3.3 90.5 ±2.9 66.1 ±4.1 66.0 ±5.7 53.5 ±2.2
+Borda Count 67.1 ±6.7 78.0 ±11.8 61.0 ±5.6 66.0 ±2.8 45.3 ±6.8
+MedAgents [72] 62.8 ±5.6 90.0 ±0.0 66.0 ±5.7 77.0 ±1.4 43.3 ±7.0
+Gemini-Pro(Vision)
+Majority V oting 52.3 ±15.3 73.5 ±4.9 47.0 ±1.4 44.0 ±4.2 47.9 ±6.6
+Weighted V oting 54.3 ±16.9 64.6 ±6.5 42.0 ±3.2 43.6 ±3.9 43.2 ±2.0
+Borda Count 67.0 ±27.7 77.3 ±9.3 37.0 ±1.8 46.1 ±3.2 44.6 ±4.5
+MedAgents [72] 43.0 ±2.7 80.5 ±1.9 40.8 ±2.9 50.5 ±3.6 38.7 ±1.5
+Multi-agent
+Reconcile [10] 68.4 ±7.4 90.6 ±2.5 60.7 ±5.7 59.5 ±8.7 33.3 ±3.4
+AutoGen [86] 67.3 ±11.8 73.3 ±3.1 64.6 ±1.2 55.3 ±3.1 43.3 ±4.2
+DyLAN [51] 56.4 ±2.9 75.3 ±4.6 60.1 ±3.1 57.3 ±6.1 38.7 ±1.2
+Meta-Prompting [70] 52.6 ±6.1 77.3 ±2.3 64.7 ±3.1 49.3 ±1.2 42.0 ±4.0
+* CoT: Chain-of-Thought, SC: Self-Consistency, ER: Ensemble Refinement
+* T : text-only, I : image+text, V : video+text
+* All experiments were tested with 3 random seeds
+Table 11: Accuracy (%) on Medical benchmarks with Our (
+ ) method."
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Medical",METHOD,Accuracy,METRIC,"Category Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+PubMedQA
+T
+Path-VQA
+I T
+PMC-VQA
+I T
+MedVidQA
+V T
+GPT-3.5
+Majority V oting 60.4 ±2.1 68.5 ±9.6 - - -
+Weighted V oting 57.3 ±3.0 65.8 ±11.4 - - -
+Borda Count 55.3 ±7.1 70.2 ±8.8 - - -
+MedAgents [72] 56.0 ±5.3 55.0 ±1.4 - - -
+GPT-4(V)
+Majority V oting 80.6 ±2.9 72.2 ±6.9 56.9 ±19.7 36.8 ±6.7 -
+Weighted V oting 78.8 ±1.1 72.2 ±6.9 62.1 ±13.9 25.4 ±9.0 -
+Borda Count 70.3 ±8.5 66.9 ±3.0 61.9 ±8.1 27.9 ±5.3 -
+MedAgents [72] 79.1 ±7.4 69.7 ±4.7 45.4 ±8.1 39.6 ±3.0 -
+Gemini-Pro(Vision)
+Majority V oting 51.6 ±2.2 65.3 ±12.9 58.2 ±7.3 27.1 ±5.4 50.8 ±7.4
+Weighted V oting 52.3 ±3.3 63.7 ±10.0 66.4 ±11.1 20.9 ±3.8 57.8 ±2.1
+Borda Count 49.4 ±9.7 57.7 ±15.0 68.2 ±1.8 25.3 ±8.7 54.5 ±4.7
+MedAgents [72] 48.4 ±5.5 63.6 ±6.0 64.9 ±12.5 35.1 ±3.1 61.6 ±4.8
+Multi-agent
+Reconcile [10] 81.3 ±3.0 79.7 ±3.2 57.5 ±3.3 31.4 ±1.2 -
+AutoGen [86] 60.6 ±5.0 77.3 ±2.3 43.0 ±8.9 37.3 ±6.1 -
+DyLAN [51] 64.2 ±2.3 73.6 ±4.2 41.3 ±1.2 34.0 ±3.5 -
+Meta-Prompting [70] 80.6 ±1.2 73.3 ±2.3 55.3 ±2.3 42.6 ±4.2 -
+Category Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPlus
+T
+SymCat
+T
+JAMA
+T
+MedBullets
+T
+MIMIC-CXR
+I T
+GPT-3.5
+Majority V oting 53.6 ±2.2 83.7 ±3.3 47.0 ±1.4 46.0 ±4.1 -
+Weighted V oting 55.2 ±2.0 85.9 ±3.0 49.0 ±1.4 43.0 ±8.4 -
+Borda Count 63.9 ±12.1 84.9 ±1.6 50.0 ±1.0 45.0 ±5.6 -
+MedAgents [72] 47.3 ±11.0 87.0 ±4.2 41.0 ±3.3 56.0 ±6.2 -
+GPT-4(V)
+Majority V oting 67.8 ±4.9 91.9 ±2.2 70.0 ±5.7 70.0 ±0.0 49.5 ±10.7
+Weighted V oting 65.9 ±3.3 90.5 ±2.9 66.1 ±4.1 66.0 ±5.7 53.5 ±2.2
+Borda Count 67.1 ±6.7 78.0 ±11.8 61.0 ±5.6 66.0 ±2.8 45.3 ±6.8
+MedAgents [72] 62.8 ±5.6 90.0 ±0.0 66.0 ±5.7 77.0 ±1.4 43.3 ±7.0
+Gemini-Pro(Vision)
+Majority V oting 52.3 ±15.3 73.5 ±4.9 47.0 ±1.4 44.0 ±4.2 47.9 ±6.6
+Weighted V oting 54.3 ±16.9 64.6 ±6.5 42.0 ±3.2 43.6 ±3.9 43.2 ±2.0
+Borda Count 67.0 ±27.7 77.3 ±9.3 37.0 ±1.8 46.1 ±3.2 44.6 ±4.5
+MedAgents [72] 43.0 ±2.7 80.5 ±1.9 40.8 ±2.9 50.5 ±3.6 38.7 ±1.5
+Multi-agent
+Reconcile [10] 68.4 ±7.4 90.6 ±2.5 60.7 ±5.7 59.5 ±8.7 33.3 ±3.4
+AutoGen [86] 67.3 ±11.8 73.3 ±3.1 64.6 ±1.2 55.3 ±3.1 43.3 ±4.2
+DyLAN [51] 56.4 ±2.9 75.3 ±4.6 60.1 ±3.1 57.3 ±6.1 38.7 ±1.2
+Meta-Prompting [70] 52.6 ±6.1 77.3 ±2.3 64.7 ±3.1 49.3 ±1.2 42.0 ±4.0
+* CoT: Chain-of-Thought, SC: Self-Consistency, ER: Ensemble Refinement
+* T : text-only, I : image+text, V : video+text
+* All experiments were tested with 3 random seeds
+Table 11: Accuracy (%) on Medical benchmarks with Our (
+ ) method."
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Clinical",METHOD,Accuracy,METRIC,"Category Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+PubMedQA
+T
+Path-VQA
+I T
+PMC-VQA
+I T
+MedVidQA
+V T
+GPT-3.5
+Majority V oting 60.4 ±2.1 68.5 ±9.6 - - -
+Weighted V oting 57.3 ±3.0 65.8 ±11.4 - - -
+Borda Count 55.3 ±7.1 70.2 ±8.8 - - -
+MedAgents [72] 56.0 ±5.3 55.0 ±1.4 - - -
+GPT-4(V)
+Majority V oting 80.6 ±2.9 72.2 ±6.9 56.9 ±19.7 36.8 ±6.7 -
+Weighted V oting 78.8 ±1.1 72.2 ±6.9 62.1 ±13.9 25.4 ±9.0 -
+Borda Count 70.3 ±8.5 66.9 ±3.0 61.9 ±8.1 27.9 ±5.3 -
+MedAgents [72] 79.1 ±7.4 69.7 ±4.7 45.4 ±8.1 39.6 ±3.0 -
+Gemini-Pro(Vision)
+Majority V oting 51.6 ±2.2 65.3 ±12.9 58.2 ±7.3 27.1 ±5.4 50.8 ±7.4
+Weighted V oting 52.3 ±3.3 63.7 ±10.0 66.4 ±11.1 20.9 ±3.8 57.8 ±2.1
+Borda Count 49.4 ±9.7 57.7 ±15.0 68.2 ±1.8 25.3 ±8.7 54.5 ±4.7
+MedAgents [72] 48.4 ±5.5 63.6 ±6.0 64.9 ±12.5 35.1 ±3.1 61.6 ±4.8
+Multi-agent
+Reconcile [10] 81.3 ±3.0 79.7 ±3.2 57.5 ±3.3 31.4 ±1.2 -
+AutoGen [86] 60.6 ±5.0 77.3 ±2.3 43.0 ±8.9 37.3 ±6.1 -
+DyLAN [51] 64.2 ±2.3 73.6 ±4.2 41.3 ±1.2 34.0 ±3.5 -
+Meta-Prompting [70] 80.6 ±1.2 73.3 ±2.3 55.3 ±2.3 42.6 ±4.2 -
+Category Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPlus
+T
+SymCat
+T
+JAMA
+T
+MedBullets
+T
+MIMIC-CXR
+I T
+GPT-3.5
+Majority V oting 53.6 ±2.2 83.7 ±3.3 47.0 ±1.4 46.0 ±4.1 -
+Weighted V oting 55.2 ±2.0 85.9 ±3.0 49.0 ±1.4 43.0 ±8.4 -
+Borda Count 63.9 ±12.1 84.9 ±1.6 50.0 ±1.0 45.0 ±5.6 -
+MedAgents [72] 47.3 ±11.0 87.0 ±4.2 41.0 ±3.3 56.0 ±6.2 -
+GPT-4(V)
+Majority V oting 67.8 ±4.9 91.9 ±2.2 70.0 ±5.7 70.0 ±0.0 49.5 ±10.7
+Weighted V oting 65.9 ±3.3 90.5 ±2.9 66.1 ±4.1 66.0 ±5.7 53.5 ±2.2
+Borda Count 67.1 ±6.7 78.0 ±11.8 61.0 ±5.6 66.0 ±2.8 45.3 ±6.8
+MedAgents [72] 62.8 ±5.6 90.0 ±0.0 66.0 ±5.7 77.0 ±1.4 43.3 ±7.0
+Gemini-Pro(Vision)
+Majority V oting 52.3 ±15.3 73.5 ±4.9 47.0 ±1.4 44.0 ±4.2 47.9 ±6.6
+Weighted V oting 54.3 ±16.9 64.6 ±6.5 42.0 ±3.2 43.6 ±3.9 43.2 ±2.0
+Borda Count 67.0 ±27.7 77.3 ±9.3 37.0 ±1.8 46.1 ±3.2 44.6 ±4.5
+MedAgents [72] 43.0 ±2.7 80.5 ±1.9 40.8 ±2.9 50.5 ±3.6 38.7 ±1.5
+Multi-agent
+Reconcile [10] 68.4 ±7.4 90.6 ±2.5 60.7 ±5.7 59.5 ±8.7 33.3 ±3.4
+AutoGen [86] 67.3 ±11.8 73.3 ±3.1 64.6 ±1.2 55.3 ±3.1 43.3 ±4.2
+DyLAN [51] 56.4 ±2.9 75.3 ±4.6 60.1 ±3.1 57.3 ±6.1 38.7 ±1.2
+Meta-Prompting [70] 52.6 ±6.1 77.3 ±2.3 64.7 ±3.1 49.3 ±1.2 42.0 ±4.0
+* CoT: Chain-of-Thought, SC: Self-Consistency, ER: Ensemble Refinement
+* T : text-only, I : image+text, V : video+text
+* All experiments were tested with 3 random seeds
+Table 11: Accuracy (%) on Medical benchmarks with Our (
+ ) method."
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Medical",METHOD,"Method
+Clinical",METHOD,"Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+PubMedQA
+T
+Path-VQA
+I T
+PMC-VQA
+I T
+MedVidQA
+V T
+GPT-3.5 64.0 ±1.6 66.0 ±5.7 - - -
+GPT-4(V) 88.7 ±4.0 75.0 ±1.0 65.3 ±3.9 56.4 ±4.5 -
+Gemini-Pro(Vision) 57.4 ±1.8 71.0 ±1.6 72.0 ±2.3 62.2 ±7.6 56.2 ±6.7
+Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPlus
+T
+SymCat
+T
+JAMA
+T
+MedBullets
+T
+MIMIC-CXR
+I T
+GPT-3.5 62.5 ±6.7 85.7 ±3.0 48.6 ±6.5 55.3 ±4.3 -
+GPT-4(V) 77.9 ±2.1 93.1 ±1.0 70.9 ±0.3 80.8 ±1.7 55.9 ±9.1
+Gemini-Pro(Vision) 59.2 ±1.2 65.0 ±6.1 47.0 ±2.2 42.9 ±3.4 48.1 ±5.8
+* CoT: Chain-of-Thought, SC: Self-Consistency, ER: Ensemble Refinement
+* T : text-only, I : image+text, V : video+text
+* All experiments were tested with 3 random seeds
+26
+Table 12: Accuracy (%) on Medical benchmarks with Solo/Group/Adaptive settings with increased
+number of samples (N=100)."
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Medical",METHOD,Accuracy,METRIC,"Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+PubMedQA
+T
+Path-VQA
+I T
+PMC-VQA
+I T
+MedVidQA
+V T
+GPT-3.5 64.0 ±1.6 66.0 ±5.7 - - -
+GPT-4(V) 88.7 ±4.0 75.0 ±1.0 65.3 ±3.9 56.4 ±4.5 -
+Gemini-Pro(Vision) 57.4 ±1.8 71.0 ±1.6 72.0 ±2.3 62.2 ±7.6 56.2 ±6.7
+Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPlus
+T
+SymCat
+T
+JAMA
+T
+MedBullets
+T
+MIMIC-CXR
+I T
+GPT-3.5 62.5 ±6.7 85.7 ±3.0 48.6 ±6.5 55.3 ±4.3 -
+GPT-4(V) 77.9 ±2.1 93.1 ±1.0 70.9 ±0.3 80.8 ±1.7 55.9 ±9.1
+Gemini-Pro(Vision) 59.2 ±1.2 65.0 ±6.1 47.0 ±2.2 42.9 ±3.4 48.1 ±5.8
+* CoT: Chain-of-Thought, SC: Self-Consistency, ER: Ensemble Refinement
+* T : text-only, I : image+text, V : video+text
+* All experiments were tested with 3 random seeds
+26
+Table 12: Accuracy (%) on Medical benchmarks with Solo/Group/Adaptive settings with increased
+number of samples (N=100)."
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,"Method
+Clinical",METHOD,Accuracy,METRIC,"Method
+Medical Knowledge Retrieval Datasets
+MedQA
+T
+PubMedQA
+T
+Path-VQA
+I T
+PMC-VQA
+I T
+MedVidQA
+V T
+GPT-3.5 64.0 ±1.6 66.0 ±5.7 - - -
+GPT-4(V) 88.7 ±4.0 75.0 ±1.0 65.3 ±3.9 56.4 ±4.5 -
+Gemini-Pro(Vision) 57.4 ±1.8 71.0 ±1.6 72.0 ±2.3 62.2 ±7.6 56.2 ±6.7
+Method
+Clinical Reasoning and Diagnostic Datasets
+DDXPlus
+T
+SymCat
+T
+JAMA
+T
+MedBullets
+T
+MIMIC-CXR
+I T
+GPT-3.5 62.5 ±6.7 85.7 ±3.0 48.6 ±6.5 55.3 ±4.3 -
+GPT-4(V) 77.9 ±2.1 93.1 ±1.0 70.9 ±0.3 80.8 ±1.7 55.9 ±9.1
+Gemini-Pro(Vision) 59.2 ±1.2 65.0 ±6.1 47.0 ±2.2 42.9 ±3.4 48.1 ±5.8
+* CoT: Chain-of-Thought, SC: Self-Consistency, ER: Ensemble Refinement
+* T : text-only, I : image+text, V : video+text
+* All experiments were tested with 3 random seeds
+26
+Table 12: Accuracy (%) on Medical benchmarks with Solo/Group/Adaptive settings with increased
+number of samples (N=100)."
+NeurIPS-2024-mdagents-an-adaptive-collaboration-of-llms-for-medical-decision-making-Paper-Conference,Method MedQA,METHOD,Method DDXPlus,METHOD,"Category Method MedQA
+T
+PubMedQA
+T
+Path-VQA
+I T
+PMC-VQA
+I T
+MedVidQA
+V T
+Single-agent
+Zero-shot 75.0 54.0 58.0 48.0 50.0
+Few-shot 77.0 55.0 58.0 50.0 51.0
++ CoT 78.0 50.0 59.0 52.0 53.0
++ CoT-SC 79.0 51.0 60.0 53.0 53.0
+ER 76.0 51.0 61.0 51.0 52.0
+Medprompt 79.0 58.0 60.0 54.0 53.0
+Multi-agent
+(Single-model)
+Majority V oting 79.0 68.0 63.0 52.0 54.0
+Weighted V oting 80.0 68.0 64.0 51.0 55.0
+Borda Count 81.0 69.0 62.0 50.0 52.0
+MedAgents 80.0 69.0 55.0 52.0 50.0
+Meta-Prompting 82.0 69.0 56.0 49.0 -
+Multi-agent
+(Multi-model)
+Reconcile 83.0 70.0 58.0 45.0 -
+AutoGen 65.0 63.0 45.0 40.0 -
+DyLAN 68.0 67.0 42.0 48.0 -
+Adaptive MDAgents (Ours) 87.0 71.0 60.0 55.0 56.0
+Category Method DDXPlus
+T
+SymCat
+T
+JAMA
+T
+MedBullets
+T
+MIMIC-CXR
+I T
+Single-agent
+Zero-shot 53.0 84.0 57.0 49.0 38.0
+Few-shot 60.0 87.0 58.0 52.0 33.0
++ CoT 66.0 84.0 55.0 64.0 33.0
++ CoT-SC 68.0 84.0 57.0 60.0 40.0
+ER 76.0 80.0 56.0 59.0 43.0
+Medprompt 70.0 84.0 62.0 60.0 43.0
+Multi-agent
+(Single-model)
+Majority V oting 53.0 82.0 56.0 59.0 54.0
+Weighted V oting 52.0 86.0 56.0 56.0 52.0
+Borda Count 53.0 86.0 56.0 59.0 51.0
+MedAgents 56.0 80.9 51.0 58.0 40.9
+Meta-Prompting 53.0 79.0 56.0 51.0 48.0
+Multi-agent
+(Multi-model)
+Reconcile 60.0 87.0 59.0 60.0 43.3
+AutoGen 47.0 87.0 53.0 55.0 47.0
+DyLAN 54.0 84.0 55.0 57.0 42.0
+Adaptive MDAgents (Ours) 75.0 89.0 59.0 67.0 56.0
+* CoT: Chain-of-Thought, SC: Self-Consistency, ER: Ensemble Refinement
+* T : text-only, I : image+text, V : video+text
+27
+Figure 8: Complexity Distribution for each dataset classified by GPT-4(V) and Gemini-Pro (Vision)
+(for MedVidQA)."
