@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-10-06T09:42:44",
+  "graph": {
+    "nodes": 5,
+    "edges": 3
+  },
+  "engine": {
+    "strategy": "self-ask",
+    "hop_limit": 2
+  },
+  "artifacts_used": {
+    "graphml": null,
+    "edgelist": null,
+    "entities_csv": null,
+    "relations_csv": null
+  }
+}
