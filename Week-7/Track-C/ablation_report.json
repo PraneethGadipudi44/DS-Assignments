@@ -1,0 +1,73 @@
+{
+  "title": "Week 7 \u2014 Track C Ablation (generated)",
+  "config": {
+    "retrieval": {
+      "embedder": "sentence-transformers/all-MiniLM-L6-v2",
+      "top_k": 5
+    },
+    "orchestrator": {
+      "max_hops": 2
+    },
+    "eval": {
+      "max_items": 12
+    },
+    "plots": {
+      "figsize": [
+        6,
+        4
+      ]
+    },
+    "random_seed": 42,
+    "ablation": {
+      "agent_counts": [
+        1,
+        2,
+        3
+      ],
+      "temperatures": [
+        0.2,
+        0.6,
+        1.0
+      ]
+    },
+    "project_model": {
+      "name": "Graph-RAG + Multi-Hop Retriever",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "hop_limit": 2,
+      "retriever_k": 5
+    },
+    "stable_diffusion": {
+      "model_id": "runwayml/stable-diffusion-v1-5",
+      "image_size": "512x512",
+      "num_inference_steps": 25,
+      "guidance_scale": 7.5,
+      "lora_training": {
+        "dataset_size": 15,
+        "epochs": 10,
+        "learning_rate": 0.0001
+      }
+    },
+    "agent": {
+      "tools": [
+        "projectQA",
+        "stableDiffusion",
+        "calculator"
+      ],
+      "guardrails": [
+        "block unsafe prompts",
+        "max 3 hops"
+      ],
+      "planner": "rule-based (image \u2192 SD, else \u2192 QA)"
+    },
+    "deployment": {
+      "platform": "Hugging Face Spaces (Streamlit + FastAPI)",
+      "public_url": "https://huggingface.co/spaces/user/week7-app",
+      "alt_tunnel": "ngrok_url_if_used"
+    }
+  },
+  "summary": "We generated ablation results by running a small eval set through the agent pipeline. Team agents generally improve retrieval quality (Hit@k / similarity) at a modest latency increase. Temperature controls diversity; mid values (~0.6) balance quality and variety.",
+  "artifacts": {
+    "csv": "/content/trackC_outputs/ablation_results.csv",
+    "plot": "/content/trackC_outputs/ablation_plot.png"
+  }
+}
