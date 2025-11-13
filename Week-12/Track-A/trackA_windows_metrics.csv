@@ -1,0 +1,61 @@
+window_id,start_sec,end_sec,window_duration_s,num_frames,latency_ms,rtf,motion_score,tremor_index,symmetry_score,summary
+0,0.0,3.0,3.0,13,25.66814422607422,116.87638863087497,6.890264756944444,0.2756105902777778,0.9601392361111111,"Movement: moderate movement (motion_score=6.89).
+Tremor: mild tremor (tremor_index=0.28).
+Symmetry: well-balanced between left and right (symmetry_score=0.96).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+1,1.5,4.5,3.0,12,3.0527114868164062,982.7328959700094,6.799289772727272,0.2719715909090909,0.9588185606060606,"Movement: moderate movement (motion_score=6.80).
+Tremor: mild tremor (tremor_index=0.27).
+Symmetry: well-balanced between left and right (symmetry_score=0.96).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+2,3.0,6.0,3.0,12,2.9964447021484375,1001.1865054105665,6.390464015151516,0.25561856060606064,0.9645255681818181,"Movement: moderate movement (motion_score=6.39).
+Tremor: mild tremor (tremor_index=0.26).
+Symmetry: well-balanced between left and right (symmetry_score=0.96).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+3,4.5,7.5,3.0,13,3.2188892364501953,931.9985186282497,6.572964409722222,0.2629185763888889,0.9753102430555556,"Movement: moderate movement (motion_score=6.57).
+Tremor: mild tremor (tremor_index=0.26).
+Symmetry: well-balanced between left and right (symmetry_score=0.98).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+4,6.0,9.0,3.0,13,3.185749053955078,941.6937584193983,7.12915798611111,0.2851663194444444,0.9506298611111111,"Movement: moderate movement (motion_score=7.13).
+Tremor: mild tremor (tremor_index=0.29).
+Symmetry: well-balanced between left and right (symmetry_score=0.95).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+5,7.5,10.5,3.0,12,2.937793731689453,1021.1744846615809,6.88435606060606,0.2753742424242424,0.9537589015151515,"Movement: moderate movement (motion_score=6.88).
+Tremor: mild tremor (tremor_index=0.28).
+Symmetry: well-balanced between left and right (symmetry_score=0.95).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+6,9.0,12.0,3.0,12,2.9985904693603516,1000.4700644032758,7.3463731060606055,0.2938549242424242,0.9755956439393939,"Movement: moderate movement (motion_score=7.35).
+Tremor: mild tremor (tremor_index=0.29).
+Symmetry: well-balanced between left and right (symmetry_score=0.98).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+7,10.5,13.5,3.0,13,3.2029151916503906,936.646717284502,7.062226562500001,0.28248906250000005,0.9408315972222222,"Movement: moderate movement (motion_score=7.06).
+Tremor: mild tremor (tremor_index=0.28).
+Symmetry: well-balanced between left and right (symmetry_score=0.94).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+8,12.0,15.0,3.0,13,3.186941146850586,941.3415126804817,6.333246527777778,0.2533298611111111,0.9482461805555555,"Movement: moderate movement (motion_score=6.33).
+Tremor: mild tremor (tremor_index=0.25).
+Symmetry: well-balanced between left and right (symmetry_score=0.95).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+9,13.5,16.5,3.0,12,2.9289722442626953,1024.250061050061,6.041936553030303,0.24167746212121213,0.9801810606060606,"Movement: moderate movement (motion_score=6.04).
+Tremor: mild tremor (tremor_index=0.24).
+Symmetry: well-balanced between left and right (symmetry_score=0.98).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+10,15.0,18.0,3.0,12,2.9654502868652344,1011.6507477086349,6.643451704545455,0.26573806818181817,0.9779895833333333,"Movement: moderate movement (motion_score=6.64).
+Tremor: mild tremor (tremor_index=0.27).
+Symmetry: well-balanced between left and right (symmetry_score=0.98).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+11,16.5,19.5,3.0,13,3.206968307495117,935.4629395583971,7.172730034722222,0.28690920138888887,0.9737699652777777,"Movement: moderate movement (motion_score=7.17).
+Tremor: mild tremor (tremor_index=0.29).
+Symmetry: well-balanced between left and right (symmetry_score=0.97).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+12,18.0,21.0,3.0,13,3.2143592834472656,933.311971517579,7.216684027777778,0.28866736111111113,0.9704439236111111,"Movement: moderate movement (motion_score=7.22).
+Tremor: mild tremor (tremor_index=0.29).
+Symmetry: well-balanced between left and right (symmetry_score=0.97).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+13,19.5,22.32,2.8200000000000003,12,2.9654502868652344,950.9517028461169,7.255994318181819,0.29023977272727275,0.9721136363636363,"Movement: moderate movement (motion_score=7.26).
+Tremor: mild tremor (tremor_index=0.29).
+Symmetry: well-balanced between left and right (symmetry_score=0.97).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."
+14,21.0,22.32,1.3200000000000003,6,1.443624496459961,914.3651990090837,7.752947916666668,0.3101179166666667,0.9603674999999999,"Movement: moderate movement (motion_score=7.75).
+Tremor: mild tremor (tremor_index=0.31).
+Symmetry: well-balanced between left and right (symmetry_score=0.96).
+Overall, this time window shows moderate movement with mild tremor and well-balanced between left and right."

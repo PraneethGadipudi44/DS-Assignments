@@ -1,0 +1,6 @@
+metric,value,notes
+trackA_avg_latency_ms,4.48,Average per-window inference latency
+trackA_avg_rtf,909.6076,Real-time factor (window_duration / latency)
+trackA_avg_motion,6.90,Average motion intensity across windows
+trackA_avg_tremor,0.276,Average tremor index (0–1)
+trackA_avg_symmetry,0.964,Average symmetry score (0–1)
