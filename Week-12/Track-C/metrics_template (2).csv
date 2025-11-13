@@ -1,0 +1,6 @@
+metric,value,notes
+trackC_avg_coverage,0.982,Avg fraction of sampled frames with detected motion region (spatial coverage) across videos
+trackC_avg_iou_consecutive,0.309,Avg IoU between consecutive bounding boxes (spatial stability) across videos
+trackC_avg_center_disp_norm,0.121,Avg normalized center displacement between frames (jitter) across videos
+trackC_avg_latency_ms,4929.83,Avg processing latency for Track C videos (ms)
+trackC_avg_rtf,4.4035,Avg real-time factor (video_duration / processing_time) for Track C
