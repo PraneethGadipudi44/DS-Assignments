@@ -1,0 +1,8 @@
+metric,value,notes
+trackB_num_repetitions,4,Estimated repetition count (temporal reasoning)
+trackB_avg_rep_duration_s,5.460,Average repetition duration
+trackB_freq_reps_per_sec,0.1779,Repetition frequency (reps/sec)
+trackB_latency_ms,904.73,Track B pipeline latency (ms)
+trackB_rtf,24.8473,Real-time factor (video_duration / processing_time)
+trackB_rep_count_mae,1,Absolute error between estimated and expected repetitions
+trackB_step_accuracy,0.8000,Step/sequence accuracy based on repetition count
